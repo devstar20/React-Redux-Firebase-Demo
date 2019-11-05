@@ -1,5 +1,6 @@
 import React from 'react'
 import ProjectSummary from './ProjectSummary'
+import projectReducer from '../../store/reducers/projectReducer';
 
 
 const ProjectList = ({projects}) => {
