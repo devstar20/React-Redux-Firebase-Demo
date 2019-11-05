@@ -1,0 +1,15 @@
+react-redux-firebase latest version doesn't work with v7.0 latest.
+Because Can't use this part:
+import { firestoreConnect } from 'react-redux-firebase'
+export default compose(
+    connect(mapStateToProps),
+    firestoreConnect([
+        { collection: 'projects'}
+      ])
+)(Dashboard)
+
+with latest react-redux-firebase and react-redux, error shows with firestoreConnect function.
+So upgrade version with this:
+npm i --save react-redux@5.1.1
+npm i --save react-redux-firebase@2.2.4
+And That works correctly.
