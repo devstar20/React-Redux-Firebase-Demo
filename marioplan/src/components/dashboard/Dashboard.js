@@ -9,7 +9,7 @@ import { Redirect } from 'react-router-dom'
 class Dashboard extends Component {
     render(){
         //console.log(this.props);
-        const { projects } = this.props
+        const { projects, auth } = this.props
        // console.log(projects);
         return(
             <div className="dashboard container">
@@ -29,10 +29,11 @@ class Dashboard extends Component {
 const mapStateToProps = (state) => {
     //console.log(state);
     return {
-        projects: state.firestore.ordered.projects
+        projects: state.firestore.ordered.projects,
+        auth: state.firebase.auth
     }
 }
-
+  
 export default compose(
     connect(mapStateToProps),
     firestoreConnect([
