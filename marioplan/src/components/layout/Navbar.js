@@ -20,6 +20,12 @@ const Navbar = (props) => {
     )
 }
 
-
+const mapSateToProps = (state) =>{
+    console.log(state)
+    return {
+        auth: state.firebase.auth,
+        profile: state.firebase.profile
+    }
+}
 
 export default  connect(mapSateToProps)(Navbar)
